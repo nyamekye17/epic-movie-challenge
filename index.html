@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Charm:wght@700&family=Fira+Sans+Condensed:ital,wght@1,300&display=swap" rel="stylesheet">
+    <title>The Count of Monte Christo movie page</title>
+    <style>
+:root{
+--backgound-color:#050505;
+--primary-color: #660101;
+--secondary-color:#AD8A1B;
+--font-heading:'Charm', cursive;
+}
+body{
+    font-family: 'Fira Sans Condensed', sans-serif;
+}
+h1,
+h2,
+h3{
+font-family: var(--font-heading);
+}
+nav ul{
+    padding: 0;
+    margin: 0;
+    margin-right: 30px;
+}
+nav li{
+    display: inline;
+    list-style: none;
+    line-height: 42px;
+    margin-left: 30px;
+}
+
+nav a{
+    text-decoration: none;
+}
+footer{
+    font-size: 18px;
+}
+#introduction{
+    background: var(--backgound-color);
+    color: var(--secondary-color);
+    padding: 80px 40px;
+}
+#introduction img{
+border: 1px solid var(--secondary-color);
+width: 100%;
+height: 100%;
+border-radius: 10px;
+margin-left: 30px;
+}   
+#cast{
+    background:var(--secondary-color);
+    padding: 60px 40px;
+    color: var(--backgound-color);
+}
+
+#cast img{
+border-radius: 10px;
+max-width: 80%;
+max-height: 80%;
+margin: auto;
+display: block;
+}
+
+#view{
+    padding: 60px 40px;
+    background: var(--backgound-color); 
+    color: #AD8A1B;
+}
+#quotes{
+    padding: 60px 40px;
+    background: var(--secondary-color); 
+    color: var(--backgound-color);
+}
+#join{
+    padding: 100px 80px;
+    background: var(--backgound-color); 
+    color: var(--secondary-color);
+}
+#join h3{
+    font-size: 36px;
+}
+#join a{
+    color: var(--primary-color);
+}
+#designer{
+    padding: 20px 10px;
+    background: rgb(50, 46, 46);
+    color: var(--secondary-color);
+}
+#designer a{
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+#designer a:hover{
+    text-decoration: underline;
+}
+
+.logo{
+    height: 65px;
+    width: 200px;
+    margin-left: 30px;
+    object-fit: contain;
+}
+.btn-outline:hover{
+    color:var(--primary-color);
+    border: 1px solid var(--primary-color);
+    background:  var(--backgound-color);
+}
+.btn-outline{
+background: var(--backgound-color) ;   
+border: 1px solid var(--secondary-color);
+color: var(--secondary-color);
+border-radius: 3px;
+font-size: 18px;
+padding: 10px 15px;
+transition: all 100ms ease-in-out;
+}
+.rating h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 36px;
+}
+.rating p{
+    text-align: center;
+   font-size: 20px;
+}
+.movie-details{
+    padding: 100px 50px;
+}
+.movie-details h1{
+  font-weight: bold;
+  font-size: 48px;
+}
+#quotes p{
+    font-size: 20px;
+}
+.movie-details p,
+#cast p,
+#view p{
+    font-size: 20px;
+}
+.movie-details strong{
+    font-size: 24px;
+}
+
+.navbar-toggler{
+    background: var(--backgound-color);
+    border: 1px solid var(--secondary-color);
+    background-color: var(--secondary-color);
+}
+#quotes h2{
+text-align: center;
+font-weight: bold;
+font-size: 48px;   
+}
+
+#cast h2,
+#view h2{
+text-align: center;
+font-weight: bold;
+font-size: 56px;
+}
+
+.navbar-nav li a{
+    color: var(--secondary-color);
+}
+.navbar-nav li a:hover{
+    background-color: var(--primary-color);
+}
+
+.iframe-container iframe{
+border: 1px solid var(--secondary-color);
+max-width: 50%;
+display: block;
+margin: 0 auto;  
+}
+#view button {
+        width: 40%;
+        background-color: var(--primary-color);
+        border: 1px solid var(--secondary-color);
+        padding: 15px;
+        font-size: 20px;
+        border-radius: 30px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.3, 0);
+        display: block;
+        margin: 0 auto;
+      }
+#view button a{
+    text-decoration: none;
+    color: var(--backgound-color);
+    font-weight: bolder;
+}
+#join button {
+        width: 50%;
+        background-color: var(--primary-color);
+        border: 1px solid var(--secondary-color);
+        padding: 20px;
+        font-size: 24px;
+        border-radius: 30px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.3, 0);
+        display: block;
+        margin: 0 auto;
+      }
+#join p{
+    font-size: 18px;
+}
+
+@media(max-width:576px){
+.movie-details{
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 40px;   
+}
+.iframe-container iframe{
+border: 1px solid var(--secondary-color);
+max-width: 100%;
+display: block;
+margin: 0 auto;  
+}
+.movie-details strong{
+    font-size: 18px;
+}
+#join p,
+#quotes p,
+#cast p,
+#view p,
+.movie-details p{
+    font-size: 18px;
+}
+#quotes h2,
+#cast h2,
+#view h2{
+text-align: center;
+font-weight: bold;
+font-size: 38px;
+}
+.movie-details h1{
+  font-weight: bold;
+  font-size: 40px;
+}
+#join h3,
+.rating h3{
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+.rating p{
+    text-align: center;
+   font-size: 18px;
+}
+#introduction{
+    padding-top: 35px;
+}
+#introduction img{
+    margin: 0 auto;
+    display: block;
+    
+}
+#join button {
+        width: 80%;
+        background-color: var(--primary-color);
+        border: 1px solid var(--secondary-color);
+        padding: 15px;
+        font-size: 18px;
+        font-weight: bold;
+        border-radius: 30px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.3, 0);
+        display: block;
+        margin: 0 auto;
+      }
+      #view button {
+        width: 50%;
+        background-color: var(--primary-color);
+        border: 1px solid var(--secondary-color);
+        padding: 15px;
+        font-size: 18px;
+        border-radius: 30px;
+        box-shadow: 0 15px 20px rgba(0, 0, 0.3, 0);
+        display: block;
+        margin: 0 auto;
+      }
+
+}
+
+    </style>
+</head>
+<body>
+    <div id="navigation" class="overflow-x-hidden">
+<nav class="d-flex justify-content-between navbar bg-dark d-none d-md-flex">
+    <a href="index.html#navigation">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/140/original/logo.jpeg?1678622600" class="logo">
+    </a>
+    <ul>
+        <li>
+            <a href="index.html#introduction" class="btn btn-outline">Home</a>
+        </li>
+        <li>
+            <a href="index.html#cast" class="btn btn-outline">Cast</a>
+        </li>
+        <li>
+            <a href="index.html#view" class="btn btn-outline">Trailer & movie link</a>
+        </li>
+        <li>
+            <a href="index.html#quotes" class="btn btn-outline">Quotes</a>
+        </li>
+        <li>
+            <a href="index.html#join" class="btn btn-outline">Join fanbase</a>
+        </li>
+    </ul>
+</nav>
+<nav class="navbar navbar-expand-lg bg-dark d-block d-md-none">
+    <div class="container-fluid">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html#introduction">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#cast">Cast</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#view">Trailer & movie link</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#quotes">Quotes</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="index.html#join">Join fanbase</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+
+   <div id="introduction" class="overflow-x-hidden">
+    <div class="row mb-5">
+        <div class="col-12 col-md-6">
+            <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/942/original/bg_intro.jpg?1678918015">
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="movie-details">
+            <h1>The Count of Monte Christo</h1>
+            <p>
+                The Count of Monte Cristo is a 2002 American historical adventure film, which is an adaptation of the 1844 novel of the same name by Alexandre Dumas, produced by Roger Birnbaum, Gary Barber, and Jonathan Glickman, and directed by Kevin Reynolds. 
+            </br>
+        </br>
+            <em><strong>Summary</strong></em>
+        </br>
+        Dantes, a sailor is falsely accused of treason by his best friend Fernand, who wants Dantes' girlfriend Mercedes for himself. Dantes is imprisoned on the island prison of Chateau d'If for 13 years.
+            </p>
+        </div>
+        </div>
+    </div>
+    <div class="rating">
+    <h3>What makes it EPIC?</h3>
+    <p>
+The audience rating for this movie answers this question. 
+</br>
+It had a 73% score on rotten tomatoes, a 7.7/10 score on IMDb and 93% of google users liked this movie.
+    </p>
+</div>
+   </div>
+   <div id="cast" class="overflow-x-hidden">
+<h2 class="mb-4">Main Cast</h2>
+<div class="row">
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/531/original/1.1.jpg?1678749687" class="img-fluid mb-3" alt="Picture of Jim Caviezel"> 
+     <p class="text-center">Jim Caviezel as Edmond Dantès</p>  
+    </div>
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/526/original/2.jpg?1678749346" class="img-fluid mb-3" alt="Picture of Guy Pearce"> 
+     <p class="text-center">Guy Pearce as Fernand Mondego</p>  
+    </div>
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/528/original/3.jpg?1678749464" class="img-fluid mb-3" alt="Picture of Dagmara Domińczyk"> 
+     <p class="text-center">Dagmara Domińczyk as Mercédès</p>  
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/537/original/4.jpg?1678750987" class="img-fluid mb-3" alt="Picture of James Frain"> 
+     <p class="text-center">James Frain as J.F. Villefort</p>  
+    </div>
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/541/original/5.jpg?1678751119" class="img-fluid mb-3" alt="Picture of Luis Guzmán"> 
+     <p class="text-center">Luis Guzmán as Jacopo</p>  
+    </div>
+    <div class="col">
+     <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/071/543/original/6.jpg?1678751280" class="img-fluid mb-3" alt="Picture of Henry Cavill"> 
+     <p class="text-center">Henry Cavill as Albert Mondego</p>  
+    </div>
+    <div class="row">
+        <div class="col-4">
+        </div>
+    <div class="col-4">
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/072/091/original/7.1.jpg?1678996714" class="img-fluid mb-3" alt="Picture of Richard Harris"> 
+        <p class="text-center">Richard Harris as Abbé Faria</p>  
+       </div>
+       <div class="col-4">
+         </div>
+    </div>
+</div>
+   </div>
+   <div id="view" class="overflow-x-hidden">
+<h2 class="mb-4">Trailer and movie link</h2>
+<div class="iframe-container">
+<iframe width="975" height="530" src="https://www.youtube.com/embed/WcUnYjbvccs" title="The Count of Monte Cristo -  Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+ </div>
+<p class="text-center mt-5">Click the button below to watch online</p>
+  <button><a href="https://ww1.goojara.to/m3mD1o" target="_blank">Watch Now</a></button>
+   </div>
+   <div id="quotes" class="overflow-x-hidden">
+<h2 class="mb-4">Some Interesting quotes from the movie</h2>
+<p class="text-center">And the characters that said it</p>
+<hr/>
+<p class="text-center mt-5">
+    "Life is a storm, my young friend. You will bask in the sunlight one moment, be shattered on the rocks the next. What makes you a man is what you do when that storm comes."
+    <br/>
+    -Edmond Dantès
+</p>
+<p class="text-center mt-5">
+    "I swear on my dead relatives - and even on the ones who are not feeling too good - I am your man forever!"
+    <br/>
+    -Jacopo
+</p>
+<p class="text-center mt-5">
+    "Here is your final lesson - do not commit the crime for which you now serve the sentence. God said, "Vengeance is mine.""
+    <br/>
+    -Abbe Faria
+</p>
+   </div>
+   <div id="join" class="overflow-x-hidden">
+<h3 class="text-center mb-5">Click the button below to join us appreciate a great movie</h3>
+<button class="join-us mb-5">Join the fanbase</button>
+<p class="text-center">For more information about the movie <a href="https://en.wikipedia.org/wiki/The_Count_of_Monte_Cristo_(2002_film)">Click here</a></p>
+   </div>
+
+   <div id="designer" class="overflow-x-hidden">
+    <footer class="text-center">
+        Coded by <a href="https://github.com/nyamekye17/">Nana Aba Acquah</a>
+    </footer>
+   </div>
+   <script>
+    function contactUs(event) {
+        event.preventDefault();
+      let name = prompt("What is your name?");
+
+      if (name.length <= 0) {
+        alert(`Please enter your name`);
+      } else {
+        alert(`Thank you ${name} for appreciating a great movie🙂`);
+      }
+    
+      
+    }
+
+    let contactButton = document.querySelector(".join-us");
+   contactButton.addEventListener("click", contactUs);
+  </script>
+</body>
+</html>
